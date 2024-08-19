@@ -1,6 +1,15 @@
-# Formato: nombre,url
+# Muiñeira
 Loliña,assets/partituras/lolinha.pdf
 Muiñeira de Freixido,assets/partituras/freixido.pdf
+
+# Pasodobre
+Pasodobre do Viño,assets/partituras/vinho.pdf
+
+# Rumba
+Rumba das Curtas,assets/partituras/curtas.pdf
+
+# Xota
+A miña burriña,assets/partituras/burrinha.pdf
+
+# Misc
 O sancristan de coimbra,assets/partituras/coimbra.pdf
-Rumba das Curtas, assets/partituras/curtas.pdf
-Pasodobre do Viño, assets/partituras/vinho.pdf

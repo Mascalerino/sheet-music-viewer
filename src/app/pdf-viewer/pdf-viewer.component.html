@@ -1,6 +1,7 @@
 <div class="container mx-auto p-4">
   <h1 class="text-2xl font-bold mb-4 text-center">Lista de Partituras</h1>
 
+  <!-- Input de búsqueda centrado -->
   <div class="flex justify-center mb-4">
     <input
       type="text"
@@ -11,17 +12,27 @@
     />
   </div>
 
-  <ul class="list-disc list-inside">
-    <li *ngFor="let pdf of filteredPdfs" class="flex items-center mb-2">
-      <a
-        href="#"
-        (click)="selectPdf(pdf)"
-        class="text-blue-500 hover:underline mr-4"
-      >
-        {{ pdf.name }}
-      </a>
-    </li>
-  </ul>
+  <!-- Usar grid con 5 columnas en pantallas medianas y grandes -->
+  <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+    <div *ngFor="let category of categories" class="mb-8">
+      <h2 class="text-xl font-semibold mb-4">{{ category.name }}</h2>
+      <table class="table-auto w-full mb-4 border-collapse">
+        <tbody>
+          <tr *ngFor="let pdf of category.pdfs" class="hover:bg-gray-200">
+            <td class="px-4 py-2 border">
+              <a
+                href="#"
+                (click)="selectPdf(pdf)"
+                class="text-blue-500 hover:underline"
+              >
+                {{ pdf.name }}
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
   <div *ngIf="selectedPdf" class="mt-6">
     <div class="flex justify-between items-center mb-4">
@@ -34,14 +45,12 @@
       </button>
     </div>
 
-    <!-- Visor PDF sin botón de descarga -->
     <iframe
       [src]="selectedPdf.url | safeUrl"
       width="100%"
       height="600px"
     ></iframe>
 
-    <!-- Botón de descarga personalizado -->
     <div class="mt-4 text-center">
       <a
         [href]="selectedPdf.url"
