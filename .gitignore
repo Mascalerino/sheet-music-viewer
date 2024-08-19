@@ -1,0 +1,84 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs
+*.log
+logs/*.log
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+jspm_packages/
+bower_components/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# dotenv environment variables file
+.env
+.env.test
+.env.production
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# Linux
+*~
+.nfs*
+
+# Windows
+*.bat
+*.cmd
+*.exe
+
+# Visual Studio Code
+.vscode/
+.history/
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# System Files
+.DS_Store
+Icon?
+Thumbs.db
+
+# Temporary files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.temp
+~*
+
+# Build directories
+dist/
+build/
+out/
+
+# TypeScript
+*.tsbuildinfo
+*.tscache
