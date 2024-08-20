@@ -1,53 +1,41 @@
-<div class="container mx-auto p-4">
-  <h1 class="text-2xl font-bold mb-4 text-center">Lista de Partituras</h1>
+<div class="container p-4">
+  <h1 class="display-4 text-center mb-4">Lista de Partituras</h1>
 
   <!-- Input de búsqueda centrado -->
-  <div class="flex justify-center mb-4">
+  <div class="d-flex justify-content-center mb-4">
     <input
       type="text"
       [(ngModel)]="searchTerm"
       (input)="filterPdfs()"
       placeholder="Buscar partituras..."
-      class="p-2 border border-gray-300 rounded w-1/2"
+      class="form-control w-50"
     />
   </div>
 
-  <!-- Usar grid con 5 columnas en pantallas medianas y grandes -->
-  <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-    <div *ngFor="let category of categories" class="mb-8">
-      <h2 class="text-xl font-semibold mb-4">{{ category.name }}</h2>
-      <table class="table-auto w-full mb-4 border-collapse">
-        <tbody>
-          <tr *ngFor="let pdf of category.pdfs" class="hover:bg-gray-200">
-            <td class="px-4 py-2 border">
-              <a
-                href="#"
-                (click)="selectPdf(pdf)"
-                class="text-blue-500 hover:underline"
-              >
-                {{ pdf.name }}
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+  <!-- Disposición horizontal de las partituras -->
+  <div class="row">
+    <div *ngFor="let pdf of filteredPdfs" class="col-md-3 mb-4 text-center">
+      <a
+        href="#"
+        (click)="selectPdf(pdf)"
+        class="text-decoration-none text-primary"
+      >
+        {{ pdf.name }}
+      </a>
     </div>
   </div>
 
   <div *ngIf="selectedPdf" class="mt-6">
-    <div class="flex justify-between items-center mb-4">
-      <h2 class="text-xl font-semibold">Visor de PDF</h2>
-      <button
-        (click)="closePdfViewer()"
-        class="text-white bg-red-500 hover:bg-red-700 font-bold py-2 px-4 rounded"
-      >
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="h4">Visor de PDF</h2>
+      <button (click)="closePdfViewer()" class="btn btn-danger">
         Cerrar Visor
       </button>
     </div>
 
     <iframe
       [src]="selectedPdf.url | safeUrl"
-      width="100%"
+      class="w-100"
       height="600px"
     ></iframe>
 
@@ -55,7 +43,7 @@
       <a
         [href]="selectedPdf.url"
         [download]="selectedPdf.name + '.pdf'"
-        class="text-white bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded"
+        class="btn btn-primary"
       >
         Descargar {{ selectedPdf.name }}
       </a>
