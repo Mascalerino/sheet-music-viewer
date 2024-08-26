@@ -1,7 +1,7 @@
 <div class="container p-4">
   <h1 class="display-4 text-center mb-4">Lista de Partituras</h1>
 
-  <!-- Input de búsqueda centrado -->
+  <!-- Input de búsqueda centrado y botón de descarga -->
   <div class="d-flex justify-content-center mb-4">
     <input
       type="text"
@@ -10,6 +10,9 @@
       placeholder="Buscar partituras..."
       class="form-control w-50"
     />
+    <button (click)="downloadAllPdfsAsZip()" class="btn btn-secondary ms-2">
+      Descargar Todo
+    </button>
   </div>
 
   <!-- Disposición horizontal de las partituras -->
@@ -25,28 +28,26 @@
     </div>
   </div>
 
-  <div *ngIf="selectedPdf" class="mt-6">
+  <div *ngIf="selectedPdf" class="mt-6" #pdfViewer>
     <div class="d-flex justify-content-between align-items-center mb-4">
-      <h2 class="h4">Visor de PDF</h2>
-      <button (click)="closePdfViewer()" class="btn btn-danger">
-        Cerrar Visor
-      </button>
+      <h2 class="h4">{{ selectedPdf.name }}</h2>
+      <div class="d-flex">
+        <a
+          [href]="selectedPdf.url"
+          [download]="selectedPdf.name + '.pdf'"
+          class="btn btn-primary me-2"
+        >
+          Descargar {{ selectedPdf.name }}
+        </a>
+        <button (click)="closePdfViewer()" class="btn btn-danger">
+          Cerrar Visor
+        </button>
+      </div>
     </div>
 
-    <iframe
-      [src]="selectedPdf.url | safeUrl"
-      class="w-100"
-      height="600px"
-    ></iframe>
-
-    <div class="mt-4 text-center">
-      <a
-        [href]="selectedPdf.url"
-        [download]="selectedPdf.name + '.pdf'"
-        class="btn btn-primary"
-      >
-        Descargar {{ selectedPdf.name }}
-      </a>
+    <!-- Contenedor PDF centrado -->
+    <div class="d-flex justify-content-center">
+      <div id="pdf-container" class="text-center"></div>
     </div>
   </div>
 </div>
