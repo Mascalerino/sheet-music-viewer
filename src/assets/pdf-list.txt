@@ -28,7 +28,6 @@ Jota de Mahia,assets/partituras/mahia.pdf
 Pasodobre do Mallou,assets/partituras/mallou.pdf
 Marchas Procesionais,assets/partituras/marchasprocesionais.pdf
 Mexicanas,assets/partituras/mexicanas.pdf
-Pasodobre de Mieres,assets/partituras/mieres.pdf
 Muiñeira do Molete,assets/partituras/molete.pdf
 O Golpe de Mondariz,assets/partituras/mondariz.pdf
 Muiñeira das zocas,assets/partituras/muinheiradaszocas.pdf
@@ -37,7 +36,7 @@ Il Paco Grande,assets/partituras/pacogrande.pdf
 Pasacorredoiras de Vilar en Festa,assets/partituras/pasacorredoirasvilarenfesta.pdf
 Pasacorredoiras de Arnoia,assets/partituras/pasarracorredoirasarnoia.pdf
 Pasodobre de Pastorzia,assets/partituras/pastoriza.pdf
-Pasucais,assets/partituras/pasucais.pdf
+Pasucais,assets/partituras/mieres.pdf
 Danza das patelas,assets/partituras/patelas.pdf
 O pirimpimpin,assets/partituras/pirimpinpim.pdf
 Pasacorredoiras de Poio,assets/partituras/poio.pdf
@@ -52,3 +51,7 @@ Muiñeira de Vilamarin,assets/partituras/vilamarin.pdf
 Pasodobre do Viño,assets/partituras/vinho.pdf
 Muiñeira de Wojtyla,assets/partituras/wojtyla.pdf
 Zocos Muiñeira,assets/partituras/zocosmuinheira.pdf
+O Galo canta a Galiña chora,assets/partituras/galocanta.pdf
+Montealegre,assets/partituras/montealegre.pdf
+Moonshine,assets/partituras/moonshine.pdf
+Le Samsonette,assets/partituras/samsonette.pdf
