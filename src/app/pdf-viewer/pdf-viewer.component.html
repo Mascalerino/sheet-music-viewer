@@ -8,7 +8,7 @@
       [(ngModel)]="searchTerm"
       (input)="filterPdfs()"
       placeholder="Buscar partituras..."
-      class="form-control w-50"
+      class="form-control w-75 w-md-50"
     />
     <button (click)="downloadAllPdfsAsZip()" class="btn btn-secondary ms-2">
       Descargar Todo
@@ -17,7 +17,10 @@
 
   <!-- Disposición horizontal de las partituras -->
   <div class="row">
-    <div *ngFor="let pdf of filteredPdfs" class="col-md-3 mb-4 text-center">
+    <div
+      *ngFor="let pdf of filteredPdfs"
+      class="col-12 col-sm-6 col-md-3 mb-4 text-center"
+    >
       <a
         href="#"
         (click)="selectPdf(pdf)"
@@ -45,9 +48,13 @@
       </div>
     </div>
 
-    <!-- Contenedor PDF centrado -->
+    <!-- Contenedor PDF centrado y adaptado a pantallas pequeñas -->
     <div class="d-flex justify-content-center">
-      <div id="pdf-container" class="text-center"></div>
+      <div
+        id="pdf-container"
+        class="text-center w-100"
+        style="max-width: 100%"
+      ></div>
     </div>
   </div>
 </div>

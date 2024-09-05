@@ -68,7 +68,6 @@ export class PdfListComponent implements OnInit {
       this.scrollToViewer();
     }, 0);
   }
-
   loadPdf(url: string): void {
     const loadingTask = pdfjsLib.getDocument(url);
     loadingTask.promise.then((pdf) => {
@@ -77,7 +76,14 @@ export class PdfListComponent implements OnInit {
         pdfContainer.innerHTML = ""; // Limpia el contenedor antes de cargar un nuevo PDF
         for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber++) {
           pdf.getPage(pageNumber).then((page) => {
-            const scale = 1.5;
+            const screenWidth = window.innerWidth;
+            let scale = 1.5; // Escala por defecto
+
+            // Cambiar la escala para dispositivos móviles
+            if (screenWidth < 768) {
+              scale = 0.75; // Escala más pequeña para pantallas pequeñas
+            }
+
             const viewport = page.getViewport({ scale: scale });
             const canvas = document.createElement("canvas");
             const context = canvas.getContext("2d")!;
