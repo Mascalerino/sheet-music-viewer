@@ -1,24 +1,19 @@
 #!/bin/bash
 
-# Mostrar un mensaje informativo
+# Actualizar el repositorio
 echo "Actualizando el repositorio..."
-# Actualizar el repositorio desde GitHub
 git pull origin main
 
-# Mostrar un mensaje informativo
-echo "Instalando dependencias (si es necesario)..."
-# Instalar dependencias
+# Instalar dependencias si es necesario
+echo "Instalando dependencias..."
 npm install
 
-# Mostrar un mensaje informativo
-echo "Compilando la aplicación en modo producción..."
-# Compilar la aplicación Angular en modo producción
+# Compilar la aplicación en modo producción
+echo "Compilando la aplicación..."
 ng build --configuration production
 
-# Mostrar un mensaje informativo
-echo "Reiniciando Nginx..."
-# Reiniciar Nginx para asegurar que los cambios sean reflejados
-sudo systemctl restart nginx
+# Reiniciar Apache para aplicar los cambios
+echo "Reiniciando Apache..."
+sudo systemctl restart apache2
 
-# Mostrar un mensaje informativo
-echo "Actualización y despliegue completados."
+echo "Despliegue completado en mascalerino.es"
