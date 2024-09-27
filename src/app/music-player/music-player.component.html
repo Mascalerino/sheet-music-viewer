@@ -1,0 +1,27 @@
+<div *ngIf="musicUrl" class="music-player-container">
+  <div class="music-player-box">
+    <div class="music-player-controls">
+      <button (click)="togglePlayPause()">
+        <mat-icon>{{ isPlaying ? "pause" : "play_arrow" }}</mat-icon>
+      </button>
+      <button (click)="stopMusic()">
+        <mat-icon>stop</mat-icon>
+      </button>
+    </div>
+
+    <!-- Barra de progreso -->
+    <input
+      type="range"
+      min="0"
+      max="100"
+      [value]="progress"
+      (input)="seekTo($event)"
+      class="progress-bar"
+    />
+
+    <!-- Estado de reproducción -->
+    <div class="music-player-status">
+      <span>{{ formatTime(currentTime) }} / {{ formatTime(duration) }}</span>
+    </div>
+  </div>
+</div>

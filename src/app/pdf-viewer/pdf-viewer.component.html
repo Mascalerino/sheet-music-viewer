@@ -32,6 +32,7 @@
   </div>
 
   <div *ngIf="selectedPdf" class="mt-6" #pdfViewer>
+    <!-- Visor de PDF -->
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h2 class="h4">{{ selectedPdf.name }}</h2>
       <div class="d-flex">
@@ -47,6 +48,12 @@
         </button>
       </div>
     </div>
+
+    <!-- Reproductor de música -->
+    <app-music-player
+      *ngIf="selectedPdf.musicUrl"
+      [musicUrl]="selectedPdf.musicUrl"
+    ></app-music-player>
 
     <!-- Contenedor PDF centrado y adaptado a pantallas pequeñas -->
     <div class="d-flex justify-content-center">

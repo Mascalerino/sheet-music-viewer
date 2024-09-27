@@ -1,17 +1,23 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-import { MatIconModule } from '@angular/material/icon'; // Importa MatIconModule
-import { MatTooltipModule } from '@angular/material/tooltip'; // Importa MatTooltipModule
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
+import { MatIconModule } from "@angular/material/icon"; // Importa MatIconModule
+import { MatTooltipModule } from "@angular/material/tooltip"; // Importa MatTooltipModule
 
-import { AppComponent } from './app.component';
-import { PdfListComponent } from './pdf-viewer/pdf-viewer.component';
-import { SafeUrlPipe } from './safe-url.pipe';
-import { PdfLoaderService } from 'src/app/services/pdf-loader.service';
+import { AppComponent } from "./app.component";
+import { PdfListComponent } from "./pdf-viewer/pdf-viewer.component";
+import { SafeUrlPipe } from "./safe-url.pipe";
+import { PdfLoaderService } from "src/app/services/pdf-loader.service";
+import { MusicPlayerComponent } from "./music-player/music-player.component";
 
 @NgModule({
-  declarations: [AppComponent, PdfListComponent, SafeUrlPipe],
+  declarations: [
+    AppComponent,
+    PdfListComponent,
+    SafeUrlPipe,
+    MusicPlayerComponent,
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,

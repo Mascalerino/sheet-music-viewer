@@ -46,3 +46,53 @@
   overflow-x: auto; /* Permitir el desplazamiento horizontal si el PDF es demasiado grande */
   overflow-y: auto; /* Permitir desplazamiento vertical */
 }
+
+.music-player-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.music-player-box {
+  border: 2px solid #007bff;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.music-player-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+button mat-icon {
+  font-size: 2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.music-player-status {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}

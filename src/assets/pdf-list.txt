@@ -1,57 +1,57 @@
+A Camposa,assets/partituras/camposa.pdf
+A miña burriña,assets/partituras/burrinha.pdf
 Aires de Pontevedra,assets/partituras/airespontevedra.pdf
-Pandeirada do Amandi,assets/partituras/amandi.pdf
+Alborada de Veiga & Chantada,assets/partituras/veigachantada.pdf
 An Dro,assets/partituras/andro.pdf
 Ave Maria,assets/partituras/avemaria.pdf
-Pasodobre do Berbes,assets/partituras/berbes.pdf
-A miña burriña,assets/partituras/burrinha.pdf
-Muiñeira de Cabana,assets/partituras/cabana.pdf
-A Camposa,assets/partituras/camposa.pdf
 Cantares de España,assets/partituras/cantaresespanha.pdf
 Cinco Mariñeiros,assets/partituras/cincomarinheiros.pdf
-O sancristan de coimbra,assets/partituras/coimbra.pdf
-Rumba das curtas,assets/partituras/curtas.pdf
 Danza das burgas,assets/partituras/danzadasburgas.pdf
+Danza das patelas,assets/partituras/patelas.pdf
 De Galicia a escocia,assets/partituras/degaliciaaescocia.pdf
 Ei vai,assets/partituras/eivai.pdf
 Fandango Mariñan,assets/partituras/fandangomarinhan.pdf
 Farruquiña chaman a porta,assets/partituras/farruquinhachamanaporta.pdf
-Muiñeira de Freixido,assets/partituras/freixido.pdf
-Jota da guia,assets/partituras/guia.pdf
 Himno Antergo,assets/partituras/himnoantergo.pdf
 Himno Español,assets/partituras/himnoespanhol.pdf
 Himno Galego,assets/partituras/himnogalego.pdf
-Jota do Cebreiro,assets/partituras/jotadocebreiro.pdf
-Rumba de Laroa,assets/partituras/laroa.pdf
-Loliña,assets/partituras/lolinha.pdf
-Muiñeira de Lugo,assets/partituras/lugo.pdf
+Il Paco Grande,assets/partituras/pacogrande.pdf
+Jota da guia,assets/partituras/guia.pdf
 Jota de Mahia,assets/partituras/mahia.pdf
-Pasodobre do Mallou,assets/partituras/mallou.pdf
+Jota do Cebreiro,assets/partituras/jotadocebreiro.pdf
+Le Samsonette,assets/partituras/samsonette.pdf
+Loliña,assets/partituras/lolinha.pdf
+Marcha da TVG,assets/partituras/tvg.pdf
 Marchas Procesionais,assets/partituras/marchasprocesionais.pdf
 Mexicanas,assets/partituras/mexicanas.pdf
-Muiñeira do Molete,assets/partituras/molete.pdf
-O Golpe de Mondariz,assets/partituras/mondariz.pdf
-Muiñeira das zocas,assets/partituras/muinheiradaszocas.pdf
-Muiñeira de Nogueira de Ramuin,assets/partituras/nogueiraramuin.pdf
-Il Paco Grande,assets/partituras/pacogrande.pdf
-Pasacorredoiras de Vilar en Festa,assets/partituras/pasacorredoirasvilarenfesta.pdf
-Pasacorredoiras de Arnoia,assets/partituras/pasarracorredoirasarnoia.pdf
-Pasodobre de Pastorzia,assets/partituras/pastoriza.pdf
-Pasucais,assets/partituras/mieres.pdf
-Danza das patelas,assets/partituras/patelas.pdf
-O pirimpimpin,assets/partituras/pirimpinpim.pdf
-Pasacorredoiras de Poio,assets/partituras/poio.pdf
-Muiñeira da Ponte San Paio,assets/partituras/pontesanpaio.pdf
-Queiruga Uz,assets/partituras/queirugauz.pdf
-Rianxeiras,assets/partituras/rianxeiras.pdf
-Pasodobre de San Roque,assets/partituras/sanroque.pdf
-Marcha da TVG,assets/partituras/tvg.pdf
-Alborada de Veiga & Chantada,assets/partituras/veigachantada.pdf
-Rumba de vergara,assets/partituras/vergara.pdf
-Muiñeira de Vilamarin,assets/partituras/vilamarin.pdf
-Pasodobre do Viño,assets/partituras/vinho.pdf
-Muiñeira de Wojtyla,assets/partituras/wojtyla.pdf
-Zocos Muiñeira,assets/partituras/zocosmuinheira.pdf
-O Galo canta a Galiña chora,assets/partituras/galocanta.pdf
 Montealegre,assets/partituras/montealegre.pdf
 Moonshine,assets/partituras/moonshine.pdf
-Le Samsonette,assets/partituras/samsonette.pdf
+Muiñeira da Ponte San Paio,assets/partituras/pontesanpaio.pdf
+Muiñeira das zocas,assets/partituras/muinheiradaszocas.pdf
+Muiñeira de Cabana,assets/partituras/cabana.pdf
+Muiñeira de Freixido,assets/partituras/freixido.pdf
+Muiñeira de Lugo,assets/partituras/lugo.pdf
+Muiñeira de Nogueira de Ramuin,assets/partituras/nogueiraramuin.pdf
+Muiñeira de Vilamarin,assets/partituras/vilamarin.pdf
+Muiñeira de Wojtyla,assets/partituras/wojtyla.pdf
+Muiñeira do Molete,assets/partituras/molete.pdf
+O Galo canta a Galiña chora,assets/partituras/galocanta.pdf
+O Golpe de Mondariz,assets/partituras/mondariz.pdf
+O pirimpimpin,assets/partituras/pirimpinpim.pdf
+O sancristan de coimbra,assets/partituras/coimbra.pdf
+Pandeirada do Amandi,assets/partituras/amandi.pdf
+Pasacorredoiras de Arnoia,assets/partituras/pasarracorredoirasarnoia.pdf
+Pasacorredoiras de Poio,assets/partituras/poio.pdf
+Pasacorredoiras de Vilar en Festa,assets/partituras/pasacorredoirasvilarenfesta.pdf
+Pasodobre de Pastoriza,assets/partituras/pastoriza.pdf
+Pasodobre de San Roque,assets/partituras/sanroque.pdf
+Pasodobre do Berbes,assets/partituras/berbes.pdf
+Pasodobre do Mallou,assets/partituras/mallou.pdf
+Pasodobre do Viño,assets/partituras/vinho.pdf
+Pasucais,assets/partituras/mieres.pdf
+Queiruga Uz,assets/partituras/queirugauz.pdf
+Rianxeiras,assets/partituras/rianxeiras.pdf
+Rumba das curtas,assets/partituras/curtas.pdf
+Rumba de Laroa,assets/partituras/laroa.pdf
+Rumba de vergara,assets/partituras/vergara.pdf
+Zocos Muiñeira,assets/partituras/zocosmuinheira.pdf

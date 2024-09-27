@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { PdfLoaderService } from "../services/pdf-loader.service";
+import { HttpClient } from "@angular/common/http"; // Asegúrate de importar HttpClientModule
 import * as pdfjsLib from "pdfjs-dist";
 import * as JSZip from "jszip";
 const FileSaver = require("file-saver");
@@ -9,6 +10,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs
 interface Pdf {
   name: string;
   url: string;
+  musicUrl?: string; // Añadimos el campo musicUrl para la URL del audio
 }
 
 @Component({
@@ -20,16 +22,22 @@ export class PdfListComponent implements OnInit {
   filteredPdfs: Pdf[] = [];
   selectedPdf: Pdf | null = null;
   searchTerm: string = "";
+  musicList: { [key: string]: string } = {}; // Lista de música
 
   @ViewChild("pdfViewer") pdfViewer!: ElementRef;
 
-  constructor(private pdfLoaderService: PdfLoaderService) {}
+  constructor(
+    private pdfLoaderService: PdfLoaderService,
+    private http: HttpClient
+  ) {}
 
   ngOnInit(): void {
     this.pdfLoaderService.getPdfList().subscribe((lines) => {
       this.parsePdfList(lines);
       this.filteredPdfs = this.pdfs; // Inicializa la lista filtrada
     });
+
+    this.loadMusicList(); // Cargar la lista de música
   }
 
   parsePdfList(lines: string[]): void {
@@ -39,6 +47,20 @@ export class PdfListComponent implements OnInit {
     });
 
     this.sortPdfs();
+  }
+
+  loadMusicList(): void {
+    this.http
+      .get("assets/music-list.txt", { responseType: "text" })
+      .subscribe((data) => {
+        const lines = data.split("\n");
+        lines.forEach((line) => {
+          const [pdfName, musicUrl] = line.split(",");
+          if (pdfName && musicUrl) {
+            this.musicList[pdfName.trim()] = musicUrl.trim();
+          }
+        });
+      });
   }
 
   sortPdfs(): void {
@@ -60,6 +82,7 @@ export class PdfListComponent implements OnInit {
   }
 
   selectPdf(pdf: Pdf): void {
+    pdf.musicUrl = this.musicList[pdf.name] ?? undefined; // Asociar música si existe
     this.selectedPdf = pdf;
     this.loadPdf(pdf.url);
 
@@ -68,6 +91,7 @@ export class PdfListComponent implements OnInit {
       this.scrollToViewer();
     }, 0);
   }
+
   loadPdf(url: string): void {
     const loadingTask = pdfjsLib.getDocument(url);
     loadingTask.promise.then((pdf) => {
